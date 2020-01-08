@@ -11,9 +11,11 @@
 %---------------------------------------------------------------------------%
 %->> Document class declaration
 %---------------------------------------------------------------------------%
-\documentclass[printcopy,fontset=fandol]{Style/neuthesis}%
+% Please use xe-bib-xe-xe to compile. This command ensures the SimHei and Content outline.
+\documentclass[printcopy,review,fontset=windows]{Style/neuthesis}%
 %- Multiple optional arguments:
 %- [<singlesided|doublesided|printcopy>]% set one or two sided eprint or print
+%- [<review|print>]% set review or final print version
 %- [draftversion]% show draft version information
 %- [fontset=<fandol|windows|mac|adobe>]% specify font set to replace automatic detection
 %- [scheme=plain]% thesis writing of international students
@@ -83,8 +85,8 @@
 %-
 \backmatter% initialize the environment
 \intotoc{\bibname}% add link to contents table and bookmark
-% \bibliography{Biblio/ref}% bibliography
-\makereference
+\bibliography{Biblio/ref}% bibliography
+% \makereference
 
 \input{Tex/Backmatter}% other information
 % \showthe\artxfontset
